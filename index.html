@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Maître des Mots Élite - 3D Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Écran de Connexion (Login) -->
+    <div id="login-screen" class="auth-screen active">
+        <div class="auth-card">
+            <h2>CONNEXION</h2>
+            <p>Entrez votre profil pour sauvegarder ou reprendre votre partie (Niveau 1 à 3000).</p>
+            <div class="input-group">
+                <input type="text" id="username-input" placeholder="Nom d'utilisateur" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Mot de passe">
+            </div>
+            <button class="btn-royal" id="login-btn">Jouer / Continuer</button>
+            <p id="login-error" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- Interface Principale du Jeu -->
+    <div id="game-container" class="hidden">
+        <div id="ui-header">
+            <div id="score-box" class="stat-box">🏆 <span id="score">0</span></div>
+            <div id="player-tag" class="stat-box">👤 <span id="current-user">Joueur</span></div>
+            <div id="coins-box" class="stat-box">🪙 <span id="coins">150</span></div>
+        </div>
+
+        <div id="mode-indicator">
+            <span id="game-mode-title">Progression Élite</span> — Niveau <span id="level-num">1</span> / 3000
+        </div>
+
+        <div id="word-slots-container"></div>
+        <div id="current-word-display"></div>
+
+        <div id="wheel-container">
+            <canvas id="swipe-canvas"></canvas>
+            <div id="letters-wheel"></div>
+        </div>
+
+        <div id="ui-actions">
+            <button class="action-btn" id="logout-btn">🚪 Quitter</button>
+            <button class="action-btn hint-btn" id="hint-btn">💡 Indice (50 🪙)</button>
+        </div>
+
+        <div id="end-screen">
+            <h2 id="end-title">GRAND MAÎTRE !</h2>
+            <p>Félicitations ! Vous avez terminé les 3000 niveaux légendaires !</p>
+            <button class="btn-royal" id="reset-game-btn">Recommencer l'aventure</button>
+        </div>
+    </div>
+
+    <!-- Fampidirana ny JS nozaraina roa (Azo antoka fa milahatra tsara) -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
